@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Thu Feb 14 23:15:59 BRST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0168-eeb9-78c9-0000008c90c0 
+on database directory C:\000000\JM\00_Generico\008_Generico_JM_Projeto_Turbo_Flyer\Generico_JM_008_Turbo_Flyer\Banco_De_Dados  with class loader sun.misc.Launcher$AppClassLoader@d93b30 
+Loaded from file:/C:/000000/JM/00_Generico/008_Generico_JM_Projeto_Turbo_Flyer/Generico_JM_008_Turbo_Flyer/dist/run568588498/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=C:\000000\JM\00_Generico\008_Generico_JM_Projeto_Turbo_Flyer\Generico_JM_008_Turbo_Flyer
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

@@ -1,0 +1,1508 @@
+<html>
+    
+    <head>
+        
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        
+        <script type="text/javascript" src='https://sites.google.com/site/jmarysystemsjquery/jquery.js'></script>
+        <script type="text/javascript" src='https://sites.google.com/site/jmarysystemsjquery/jmary_menu_jquery.js'></script>
+        <script type="text/javascript" src='https://sites.google.com/site/jmarysystemsjquery/mostrarTd_Js.js'></script>
+
+        <link rel="stylesheet" href="https://sites.google.com/site/saojoaomadeirasmenudrop/jmarymenudrop.css"/>
+        <link rel="stylesheet" href="https://sites.google.com/site/jmarysystemscss/jmary_menu.css"/>
+        <link rel="stylesheet" href="https://sites.google.com/site/gbarbosacss/jmary_topo.css"/>
+        <link rel="stylesheet" href="https://sites.google.com/site/jmarysystemscss/estrutura.css"/>   
+        
+        <link rel="shortcut icon" href="https://sites.google.com/site/jmarysystemsimagens/jmol.png">
+        
+        <script type="text/javascript" src='https://sites.google.com/site/portuguesfonologiafonema/fonteMaisMenos.js'></script>
+        <script type="text/javascript" src='https://sites.google.com/site/portuguesfonologiafonema/imprimir_div.js'></script>
+        <script type="text/javascript" src='https://sites.google.com/site/perguntaserespostasjmary/abrirFrames.js'></script>
+        
+        <style>
+            
+            h1{ font:bold 150% verdana,arial,helvetica; }  
+            
+            p{ line-height:1.1em; }
+            
+            h2{ font:bold 120% verdana,arial,helvetica; color:#8080FF; }
+            
+            PRE {
+                font-family: 'courier new',courier,serif;
+                font-size: 80%;
+                font-weight: bold;
+                background: #EEEEFF;
+            }
+            
+            .espaco_a_esquerda_20_px{                 
+                padding-left:  0px;
+                padding-right: 0px;
+                padding-top:   0px;
+                padding-bottom:0px;                
+                margin-left:   20px;
+                margin-right:  0px;
+                margin-top:    0px;
+                margin-bottom: 0px;
+            }
+            
+            .espaco_a_esquerda_40_px{                 
+                padding-left:  0px;
+                padding-right: 0px;
+                padding-top:   0px;
+                padding-bottom:0px;                
+                margin-left:   40px;
+                margin-right:  0px;
+                margin-top:    0px;
+                margin-bottom: 0px;
+            }
+            
+            .mostrar { display: block; }
+            .linha { background-color:#F0F0F0; }
+            .linha:hover { background-color:#fff; }
+            .sombra { box-shadow: 0px 0px 10px #222; }
+            
+            .bodypadrao   {width: 100%; height: 100%; font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding: 0px; margin: 0px 0px 0px 0px; color: black; line-height: 1.5; }
+            .divpartesuperior{ background-color: #3A3A3A; overflow: visible; width: 300px; height: 50px; padding: 0; margin: 0; z-index: 2000; line-height: 50px;}       
+            .ulpartesuperior{list-style:none; padding: 0px; margin: 0px; height: 100%;  }       
+            .lipartesuperior{height: 50px; float: left; position: relative; }
+            .li_imagem_menu{
+                background-image: url("img/menu_bt_1.png");
+                background-repeat: no-repeat;
+                height: 30px; width: 30px; margin-top: 10px; cursor: pointer;  margin-left: 10px; }
+            .li_imagem_menu:hover{
+                background-image: url("img/menu_bt_2.png");
+                background-repeat: no-repeat;
+                height: 30px; width: 30px; margin-top: 10px; cursor: pointer;  margin-left: 10px; }
+            
+            .ulcontrolefull{background-color: #F0F0F0; list-style:none; line-height: 25px; padding-left: 0px; padding-right: 5px; padding-bottom: 10px; padding-top: 0px; margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: 10px; }
+            .ulsimples{list-style:none; padding: 0px; margin: 0px;} 
+            .materiaprimeirobloco{list-style:none; padding: 0px; margin: 0px;} 
+            .materiasegundobloco{list-style:none; padding-left: 30px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;} 
+            .materiasegundobloco2{list-style:none; padding-left: 60px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .materiasegundobloco3{list-style:none; padding-left: 90px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_1{padding-left: 35px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_1:hover{padding-left: 35px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px; border-right-style: solid; border-right-color: #C10033;}
+            .categoriaprimeirobloco_2{padding-left: 60px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_2:hover{padding-left: 60px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px; border-right-style: solid; border-right-color: #C10033;}   
+            .categoriaprimeirobloco_3{padding-left: 90px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_3:hover{padding-left: 90px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px; border-right-style: solid; border-right-color: #C10033;} 
+            .categoriaprimeirobloco_4{padding-left: 123px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_4:hover{padding-left: 123px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px; border-right-style: solid; border-right-color: #C10033;} 
+            
+            .alinha{ padding-left: 1px; color:#0000FF; text-decoration:none; }
+            
+            
+h4 { page-break-before:always; }
+            
+@page { size: 21cm 29.7cm; margin-left: 0.5cm; margin-right: 0.5cm; margin-top: 0.5cm; margin-bottom: 0.5cm; }
+@page:first { size: 21cm 29.7cm; margin-left: 0.5cm; margin-right: 0.5cm; margin-top: 1.5cm; margin-bottom: 0.5cm; }
+
+html, body { height: 100%; }
+
+body { font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding: 0px; margin: 0px; color: black; line-height: 1.5;
+}
+
+.menu       { text-decoration:none; color:#FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
+.menu:hover {color:#FFFFFF; text-decoration:underline; }
+
+.menul       { text-decoration:none; color:#0000FF; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
+.menul:hover {color:#0000FF; text-decoration:underline; }
+
+.botm2:hover {color: black; font-size: 14px; text-align: center; font-weight:bold; background: #CCFF00; cursor: pointer; }
+            
+.txttitulo { color: #1C1C1C; font-size: 20px; text-align: center; } 
+
+/* background */
+.backp     { background-color:#E4E4E4; }
+.backtitulo{ background: #CCFF00;      }
+.backred   { background-color:#C10033; }
+.backcinza { background-color:#F0F0F0; }
+.backbco   { background-color:#FFFFFF; }
+
+.boxtitulosombra { box-shadow: 0 0 10px #222; }
+
+/* COR DO TEXTO */
+fazul    { color: #0000FF; }
+fpreto   { color:#000000;  }
+fbranca  { color: white;   }
+froxo    { color: #520693; }
+fverde   { color: #339900; }
+.flaranja{ color: #EF7900 ;}
+.fpreto  { color:#000000;  }
+            
+.festilobold{ font-weight:bold; }
+            
+/* DECORAÇÂO DO TEXTO */
+.decotxtnao  { text-decoration:none;      }
+.decotxtlinha{ text-decoration:underline; }
+            
+/* ALIMENTAÇÃO DO TEXTO HORIZONTAL*/
+.alimtxtcenterh {text-align:center;  }
+.alimtxtlefth   {text-align:left;    }
+.alimtxtrighth  {text-align:right;   }
+.alimtxtjustifyh{text-align:justify ;}
+
+/* ALIMENTAÇÃO DO TEXTO VERTICAL*/
+.alimtxtcenterv { vertical-align: central; }
+.alimtxttopov   { vertical-align: top; }
+
+            
+/* CURSORES DO MOUSE */
+.mousepointer{ cursor:pointer; }
+      
+/* MOUSE HOVER */
+.mouseencimatxtverde:hover    { color: #00CC00;            }
+
+.mouseencimaftm16px:hover     { font-size:16px;            }
+
+.mouseencimadecotxtnao:hover  { text-decoration:none;      }
+.mouseencimadecotxtsim:hover  { text-decoration:underline; }
+
+/* LINK */
+.linktipo1:link             { color: #0000FF;            }
+.linktipo1:visited          { color: #0000FF;            }
+.linktipo1:active           { color: #0000FF;            }
+.linktipo1:hover            { color: #00CC00;            }
+
+            
+/* TAMANHOS DE FONTES */
+.ftm10px{ font-size:10px; }
+.ftm11px{ font-size:11px; }
+.ftm12px{ font-size:12px; }
+.ftm13px{ font-size:13px; }
+.ftm14px{ font-size:14px; }
+.ftm15px{ font-size:15px; }
+.ftm16px{ font-size:16px; }
+.ftm17px{ font-size:17px; }
+.ftm18px{ font-size:18px; }
+.ftm19px{ font-size:19px; }
+.ftm20px{ font-size:20px; }
+.ftm140porc{ font-size:140%; }
+            
+/* PADDING TOP*/
+.pf0 { padding: 0px      }
+.pt0 { padding-top:0px   }
+.pt2 { padding-top:2px   }
+.pt3 { padding-top:3px   }
+.pt5 { padding-top:5px   }
+            
+/* PADDING DIREITA */
+.pr0  { padding-right:0px   }
+.pr20 { padding-right:20px   }
+            
+/* PADDING ESQUERDA */
+.pl0  { padding-left:0px  }
+.pl10 { padding-left:10px }
+.pl20 { padding-left:20px }
+            
+/* PADDING BOTTOM */
+.pb0 {padding-bottom:0px }
+            
+/* MARGIN BOTTOM */
+.mf0  { margin: 0px  }
+.mb0  { margin-bottom:0px  }
+.mb10 { margin-bottom:10px } 
+.mb20 { margin-bottom:20px } 
+            
+/* MARGIN ESQUERDA */
+.mlpercent1  { margin-left:1% }
+.ml2   { margin-left:2px }
+.ml0   { margin-left:0px }
+.ml13  { margin-left:13px }
+.ml15  { margin-left:15px }
+.ml20  { margin-left:20px }
+.ml30  { margin-left:30px }
+.ml40  { margin-left:40px }
+.ml60  { margin-left:60px }
+.ml150 { margin-left: 150px; }
+.ml180 { margin-left: 180px; }
+.ml190 { margin-left: 190px; }
+            
+/* MARGIN DIREITA */
+.mr0 { margin-right:0px }
+.mr2 { margin-right:2px }
+.mr3 { margin-right:3px }
+.mr20 { margin-right:20px }
+            
+/* MARGIN TOP */
+.mt0  { margin-top:0px  }
+.mt3  { margin-top:3px  }
+.mt4  { margin-top:4px  }
+.mt5  { margin-top:5px  }
+.mt2  { margin-top:2px  }
+.mt10 { margin-top:10px }
+.mt11 { margin-top:11px }
+.mt15 { margin-top:15px }
+.mt20 { margin-top:20px }
+
+/* FLOAT */
+.floatl { float: left;  }
+.floatr { float: right; }
+
+/* POSITION */
+.positionr{ position:relative; }
+.positiona{ position:absolute; }
+
+/* Tamanho Vertical */
+.h16px  { height: 16px;  }
+.h27px  { height: 27px;  }
+.h28px  { height: 28px;  }
+.h44px  { height: 44px;  }
+.h62px  { height:62px;   }
+.h131px { height: 131px; }
+.h134px { height: 134px; }
+
+/* Tamanho Horizonal */
+.wpercent99  { width:99%;   }
+.wpercent100 { width:100%;  }
+.w27px       { width:27px;  }
+.w146px      { width:146px; }
+
+/* border-bottom-style */
+.bbsr{ border-bottom-style: ridge; }
+
+/* border-bottom-color */
+.bbcb { border-bottom-color: #FFFFFF; }
+
+/* display */
+.dispin { display:inline; }
+
+/* list-style */
+.listsn { list-style:none; }
+
+/* border-bottom-style */
+.bbsr{ border-bottom-style: ridge; }
+/* border-bottom-color */
+.bbcb { border-bottom-color: #FFFFFF; }
+/* display */
+.dispin { display:inline; }
+/* list-style */
+.listsn { list-style:none; }            
+        </style>
+    </head>
+    
+    <body 
+        style="width: 100%; height: 100%; padding: 0; margin: 0;
+               font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: black; line-height: 1.5;" 
+        onload='letra(&apos;corpo&apos;);'
+    >    
+               
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### JM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->          
+<div id="topo_geral_prop_t" style="padding: 0px; margin: 0px; border-bottom: 1px solid;">
+<!-- ***************++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+<!-- ####  ####  -->
+<!-- ***************++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<tr><td>
+        
+    <div id="topo_geral_prop" class="topo_geral" style="border-bottom: 1px solid; ">
+        
+     <div class="topo" >
+         
+        <div class="custom-logo" > <img src="https://sites.google.com/site/jmarysystemsimagens/jmlogo.png" alt="" style="height: 100%"></div>
+       
+        <div class="custom-informacoes">
+            <table border="0" cellpadding="0" cellspacing="0"> 
+                <tr class="fone">
+                    <td colspan="3" align="center" valign="center">
+                        <img align="center" src="https://sites.google.com/site/jmarysystemsimagens/fone.png" alt="">
+                        <span style="font-family: Arial, Helvetica, sans-serif; font-size: 18px;">85</span> 
+                        9139.2441
+                    </td>
+                </tr>
+                <tr class="">
+                    <td style="padding: 0px; margin: 0px;">
+                    <div style="padding-bottom: 0px; padding-left: 0px; padding-top: 0px; padding-right: 20px; margin: 0px;">
+                        <img 
+                            style="cursor: pointer;" src="https://sites.google.com/site/jmarysystemsimagens/youtube.png" title="Youtube"
+                            onClick="
+                                window.open('https://www.youtube.com/channel/UCIk8r6v-MqbbN7pf5lGVW6w/videos', '_blank');
+                            "
+                        >
+                        <img 
+                            style="cursor: pointer;" src="https://sites.google.com/site/jmarysystemsimagens/facebook.png" title="Facebook"
+                            onClick="
+                                window.open('https://pt-br.facebook.com/PerguntasERespostasJMary', '_blank');
+                            "
+                        >
+                        <img 
+                            style="cursor: pointer;" src="https://sites.google.com/site/jmarysystemsimagens/google.png" title="Google+"
+                            onClick="
+                                window.open('http://jmarysystems.business.site', '_blank');
+                            "
+                        >
+                    </div>
+                    </td>    
+                </tr> 
+            </table>
+            
+        </div>
+     </div>
+    </div>    
+    
+</td></tr>
+<!-- FIM tabelatopo++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->             
+</table>
+<!-- FIM tabelatopo++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->  
+</div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### TOPO FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### MENU INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->   
+<div style="background-color: #3A3A3A; 
+            width:            100%; 
+            height:           50px; 
+            padding:          0; 
+            margin:           0;              
+            z-index:          2000;
+            position: relative;
+            " >
+    
+<ul style="list-style:none; padding: 0px; margin: 0px; height: 100%; z-index: 2000;">
+   
+    
+    
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 1 INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+    <li 
+        style="height: 100%;  float:    left;    position: relative; 
+               width:  55px;  overflow: visible; z-index: 2000;"
+                        
+        onMouseover="
+            this.style.backgroundColor='#23871C'; 
+            this.style.color='#3A3A3A';"
+            
+        onMouseout="
+            this.style.backgroundColor='#3A3A3A';"           
+    >
+        <img 
+            
+            style="height: 30px; width: 30px; padding-top: 10px; padding-left: 10px;"
+            src="https://sites.google.com/site/jmarysystemsimagens/mobile_menu_btn.png" 
+            onclick= "mostrarocultar('indice');"
+            onmouseover="this.src='https://sites.google.com/site/saojoaomadeirasimagens/mobile_menu_btn2.png'" 
+            onmouseout="this.src='https://sites.google.com/site/jmarysystemsimagens/mobile_menu_btn.png'">
+        
+<!-- ///////////////////////////////////////////////////////// INDICE INÍCIO ///////////////////////////////////////////////////////////// --> 
+<!-- ///////////////////////////////////////////////////////// INDICE INÍCIO ///////////////////////////////////////////////////////////// --> 
+<div id="indice" style="padding-top: 5PX; margin: 0; z-index: 3000; display: none;      
+                font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: black; line-height: 1.5;
+                float: left;
+                box-shadow: 0px 0px 20px #222;">  
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->     
+            
+<!-- INÍCIO DA MATÉRIA /////////////////////////////////////////////////////////////////////////// -->             
+            <div style="padding: 0; margin: 0; z-index: 2000;">  
+                <ul style="list-style: none; padding: 0px; margin: 0px;/*float: left;*/">
+           
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### PORTUGUÊS INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    -0
+    -1
+    -2
+    - #### NOME DA MATÉRIA INÍCIO #### -->  
+    <li style="background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+    <!-- 
+    -0
+    -1
+    -2            
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+        <table>
+            <tr>
+                <td>
+                    
+<!-- $$$$$$$$$$$$$$$ onclick="mostrarocultar('PORTUGUES_CATEGORIAS_TODAS_INICIO'); ID --->     
+
+                    <img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                        style="vertical-align: middle; height:27px; width:27px; padding: 0; margin: 0;"
+                        onclick="mostrarocultar('PORTUGUES_CATEGORIAS_TODAS_INICIO');
+                        indiceclickalterarimagem( this, this.src);" 
+                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"
+                    > 
+                    
+<!-- $$$$$$$$$$$$$$$ onclick="mostrarocultar('PORTUGUES_CATEGORIAS_TODAS_INICIO'); ID --->   
+
+                </td>
+                <td  NOWRAP="NOWRAP">
+                    <a style="cursor: pointer; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:5px; line-height:  35px; text-decoration: none;"
+                        onclick="mostrarocultar('indice');"                           
+                        onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';" 
+                        target="centro"
+                        href="https://jmtrueconteudo.blogspot.com.br/2018/04/lingua-portuguesa-atualmente-o.html">
+                        Português&nbsp;&#9662;&nbsp; 
+                    </a> 
+                </td>
+            </tr>
+        </table>                                                                                    
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    -0
+    -1
+    -2
+    - #### NOME DA MATÉRIA FIM #### -->  
+    </li>
+    <!-- 
+    -0
+    -1
+    -2            
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->                 
+                    
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    -0
+    -1
+    -2
+    - #### PORTUGUES_CATEGORIAS_TODAS_INICIO #### -->  
+    
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     ID     --------------- display: none; ou tira -->     
+
+    <li id="PORTUGUES_CATEGORIAS_TODAS_INICIO" style="width: 100%; display: none; overflow: visible; float: left; background-color:#F0F0F0;" >
+        
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     ID     --------------- display: none; ou tira -->          
+
+    <div style="padding: 0; margin: 0;">                              
+    <ul style="list-style:none; padding: 0px; margin: 0px;">
+    <!-- 
+    -0
+    -1
+    -2            
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        -0
+        -1
+        -2
+        - #### CATEGORIA_001_INÍCIO #### -->  
+        <li style="padding-left: 30px; background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+        <!-- 
+        -0
+        -1
+        -2            
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <table>
+                <tr>
+                    <td>
+                        
+<!-- $$$$$$$$$$$$$$$ onclick="mostrarocultar('PORTUGUES_SUBCATEGORIA_001_INICIO'); ID --->       
+
+                        <img id="img2" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                            style="vertical-align: middle; height:27px; width:27px; padding-left: 5px;"
+                            onclick="mostrarocultar('PORTUGUES_SUBCATEGORIA_001_INICIO');
+                            indiceclickalterarimagem( this, this.src);" 
+                            onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                            onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                        
+<!-- $$$$$$$$$$$$$$$ onclick="mostrarocultar('PORTUGUES_SUBCATEGORIA_001_INICIO'); ID --->      
+
+                    </td>
+                    <td NOWRAP="NOWRAP">
+                        <a style="cursor: pointer; color: #000000; font-family:  Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:10px; line-height:  35px; text-decoration: none;"
+                            onclick="mostrarocultar('indice');" onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';"  
+                            target="centro"
+                            href="https://jmtrueconteudo.blogspot.com.br/2018/04/baixar-maquina-virtual-java-as-aulas-em_79.html"> 
+                            Fonologia&nbsp;&#9662;&nbsp; </a> 
+                    </td>
+                </tr>
+            </table>                                                                                                   
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        -0
+        -1
+        -2
+        - #### CATEGORIA_001_FIM #### -->  
+        </li>
+        <!-- 
+        -0
+        -1
+        -2            
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+               
+            <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+            -0
+            -1
+            -2
+            - #### PORTUGUES_SUBCATEGORIA_001_INICIO #### -->  
+            
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     ID     --------------- display: none; ou tira --> 
+
+            <li id="PORTUGUES_SUBCATEGORIA_001_INICIO" style="width: 100%; float: left; display: none; overflow: visible" >
+                
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     ID     --------------- display: none; ou tira -->                 
+                
+            <div style="padding: 0; margin: 0;"> 
+            <ul style="list-style:none; padding: 0px; margin: 0px;">
+            <!-- 
+            -0
+            -1
+            -2            
+            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->  
+                <li style="padding-left: 60px; background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+                    <table>
+                        <tr>
+                            <td NOWRAP="NOWRAP">
+                                <a style="cursor: pointer; color: #000000; font-family:  Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:10px; line-height:  35px; text-decoration: none;"
+                                    onclick="mostrarocultar('indice');" 
+                                    onMouseover="this.style.color='#0000FF'; " 
+                                    onMouseout="this.style.color='#000000';" 
+                                    target="centro"
+                                    href="https://jmtrueconteudo.blogspot.com.br/2018/04/indice-adicao.html"> 
+                                    Fonética&nbsp;
+                                </a>  
+                            </td>
+                        </tr>
+                    </table>     
+                </li>                                                            
+            <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+            -0
+            -1
+            -2
+            - #### SUBCATEGORIA_001_FIM #### -->  
+            </ul> 
+            </div>
+            </li> 
+            <!-- 
+            -0
+            -1
+            -2            
+            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            
+        <!-- #### CATEGORIA_001_FIM ############################################ --> 
+        <!-- #### CATEGORIA_001_FIM ############################################ -->
+            
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    -0
+    -1
+    -2
+    - #### CATEGORIAS_TODAS_FIM #### -->  
+    </ul>  
+    </div> 
+    </li> 
+    <!-- 
+    -0
+    -1
+    -2            
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->                           
+                             
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### PORTUGUÊS FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+                    
+                    
+                    
+                    
+                    
+                
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+   
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### MATEMÁTICA INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    -0
+    -1
+    -2
+    - #### NOME DA MATÉRIA INÍCIO #### -->  
+    <li style="background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+    <!-- 
+    -0
+    -1
+    -2            
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+        <table>
+            <tr>
+                <td>
+                    <img id="img1" class="img_menosbco" src="" title="Mostrar/Ocultar"                              
+                        style="vertical-align: middle; height:27px; width:27px; padding: 0; margin: 0;"
+                        onclick="mostrarocultar('indice_materia_1');
+                        indiceclickalterarimagem( this, this.src);" 
+                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"
+                    > 
+                </td>
+                <td  NOWRAP="NOWRAP">
+                    <a style="cursor: pointer; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:5px; line-height:  35px; text-decoration: none;"
+                        onclick="mostrarocultar('indice');"                           
+                        onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';" 
+                        target="centro"
+                        href="https://jmtrueconteudo.blogspot.com.br/2017/12/matematica-matematica-estuda.html">
+                        Matemática&nbsp;&#9662;&nbsp; 
+                    </a> 
+                </td>
+            </tr>
+        </table>                                                                                    
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    -0
+    -1
+    -2
+    - #### NOME DA MATÉRIA FIM #### -->  
+    </li>
+    <!-- 
+    -0
+    -1
+    -2            
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->                 
+                    
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    -0
+    -1
+    -2
+    - #### CATEGORIAS_TODAS_INÍCIO #### -->  
+    <li id="indice_materia_1" style="width: 100%; overflow: visible; float: left; background-color:#F0F0F0;" >
+    <div style="padding: 0; margin: 0;">                              
+    <ul style="list-style:none; padding: 0px; margin: 0px;">
+    <!-- 
+    -0
+    -1
+    -2            
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        -0
+        -1
+        -2
+        - #### CATEGORIA_001_INÍCIO #### -->  
+        <li style="padding-left: 30px; background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+        <!-- 
+        -0
+        -1
+        -2            
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <table>
+                <tr>
+                    <td>
+                        <img id="img2" class="img_menosbco" src="" title="Mostrar/Ocultar"                              
+                            style="vertical-align: middle; height:27px; width:27px; padding-left: 5px;"
+                            onclick="mostrarocultar('indice_materia_1_categoria_1');
+                            indiceclickalterarimagem( this, this.src);" 
+                            onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                            onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                    </td>
+                    <td NOWRAP="NOWRAP">
+                        <a style="cursor: pointer; color: #000000; font-family:  Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:10px; line-height:  35px; text-decoration: none;"
+                            onclick="mostrarocultar('indice');" onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';"  
+                            target="centro"
+                            href="https://jmtrueconteudo.blogspot.com.br/2017/07/baixar-maquina-virtual-java-as-aulas-em_26.html"> 
+                            Áritmética&nbsp;&#9662;&nbsp; </a> 
+                    </td>
+                </tr>
+            </table>                                                                                                   
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        -0
+        -1
+        -2
+        - #### CATEGORIA_001_FIM #### -->  
+        </li>
+        <!-- 
+        -0
+        -1
+        -2            
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+               
+            <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+            -0
+            -1
+            -2
+            - #### SUBCATEGORIA_001_INÍCIO #### -->  
+            <li id="indice_materia_1_categoria_1" style="width: 100%; float: left; overflow: visible" >
+            <div style="padding: 0; margin: 0;"> 
+            <ul style="list-style:none; padding: 0px; margin: 0px;">
+            <!-- 
+            -0
+            -1
+            -2            
+            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->  
+                <li style="padding-left: 60px; background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+                    <table>
+                        <tr>
+                            <td NOWRAP="NOWRAP">
+                                <a style="cursor: pointer; color: #000000; font-family:  Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:10px; line-height:  35px; text-decoration: none;"
+                                    onclick="mostrarocultar('indice');" 
+                                    onMouseover="this.style.color='#0000FF'; " 
+                                    onMouseout="this.style.color='#000000';" 
+                                    target="centro"
+                                    href="https://jmtrueconteudo.blogspot.com.br/2017/08/baixar-maquina-virtual-java-as-aulas-em.html"> 
+                                    Adição&nbsp;
+                                </a>  
+                            </td>
+                        </tr>
+                    </table>     
+                </li>                                                            
+            <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+            -0
+            -1
+            -2
+            - #### SUBCATEGORIA_001_FIM #### -->  
+            </ul> 
+            </div>
+            </li> 
+            <!-- 
+            -0
+            -1
+            -2            
+            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            
+        <!-- #### CATEGORIA_001_FIM ######################################## --> 
+        <!-- #### CATEGORIA_001_FIM ######################################## -->
+            
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+    -0
+    -1
+    -2
+    - #### CATEGORIAS_TODAS_FIM #### -->  
+    </ul>  
+    </div> 
+    </li> 
+    <!-- 
+    -0
+    -1
+    -2            
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->                           
+                             
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### MATEMÁTICA FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### LIVROS INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->                     
+                    <li style="background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" >        
+                        <table><tr>
+<!-- MATÉRIA ////////--><td><img id="img5" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                style="vertical-align: middle; height:27px; width:27px; padding: 0; margin: 0;"
+                                onclick=    "mostrarocultar('indice_materia_2');
+                                indiceclickalterarimagem      ( this, this.src);" 
+                                onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                        </td>
+                        <td  NOWRAP="NOWRAP">
+<!-- MATÉRIA ////////////--><a style="cursor: pointer; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:5px; line-height:  35px; text-decoration: none;"
+                                
+                                onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';" > 
+                                Livros&nbsp;&#9662;&nbsp; </a> 
+                        </td></tr></table>                                                                        
+                    </li>    
+<!-- INÍCIO CATEGORIA ///////////////////////////////////////////////////////////////////////////////////////////////////////-->                    
+                    <li id="indice_materia_2" style="width: 100%; display: none; overflow: visible; float: left; background-color:#F0F0F0;" >
+                  
+                        <div style="padding: 0; margin: 0;">                              
+                            <ul style="list-style:none; padding: 0px; margin: 0px;">
+                                
+                                <li style="padding-left: 30px; background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+                                    <table><tr>
+                                       <td NOWRAP="NOWRAP">
+<!-- CATEGORIA //////////////////////////--><a style="cursor: pointer; color: #000000; font-family:  Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:10px; line-height:  35px; text-decoration: none;"
+                                            onclick="mostrarocultar('indice');"    
+                                            onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';"  
+                                            target="centro"
+                                            href="https://jmtrueconteudo.blogspot.com.br/2018/02/indice-adicao.html"
+                                            >        
+                                            Português </a> 
+                                        </td></tr></table>                                                                                  
+                                </li>
+                                
+                                <li style="padding-left: 30px; background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+                                    <table><tr>
+                                       <td NOWRAP="NOWRAP">
+<!-- CATEGORIA //////////////////////////--><a style="cursor: pointer; color: #000000; font-family:  Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:10px; line-height:  35px; text-decoration: none;"
+                                            onclick="mostrarocultar('indice');"    
+                                            onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';"  
+                                            target="centro"
+                                            href="https://jmtrueconteudo.blogspot.com.br/2017/12/indice-adicao.html"
+                                            >        
+                                            Matemática </a> 
+                                        </td></tr></table>                                                                                  
+                                </li>
+                                
+                                <li style="padding-left: 30px; background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+                                    <table><tr>
+                                       <td NOWRAP="NOWRAP">
+<!-- CATEGORIA //////////////////////////--><a style="cursor: pointer; color: #000000; font-family:  Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:10px; line-height:  35px; text-decoration: none;"
+                                            onclick="mostrarocultar('indice');"    
+                                            onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';"  
+                                            target="centro"
+                                            href="https://jmtrueconteudo.blogspot.com.br/2018/02/livrosfisica.html"
+                                            >        
+                                            Física </a> 
+                                        </td></tr></table>                                                                                  
+                                </li>
+                                
+                                <li style="padding-left: 30px; background-color:#F0F0F0; border-bottom: 1px solid #000000;" onMouseover="this.style.backgroundColor='#FFFFFF';" onMouseout="this.style.backgroundColor='#F0F0F0';" > 
+                                    <table><tr>
+                                       <td NOWRAP="NOWRAP">
+<!-- CATEGORIA //////////////////////////--><a style="cursor: pointer; color: #000000; font-family:  Arial, Helvetica, sans-serif; font-size: 19px; padding-left: 5px; padding-right:10px; line-height:  35px; text-decoration: none;"
+                                            onclick="mostrarocultar('indice');"    
+                                            onMouseover="this.style.color='#0000FF'; " onMouseout="this.style.color='#000000';"  
+                                            target="centro"
+                                            href="https://jmtrueconteudo.blogspot.com.br/2018/02/livrosinformatica.html"
+                                            >        
+                                            Informática </a> 
+                                        </td></tr></table>                                                                                  
+                                </li>
+                                
+                            </ul>  
+                        </div>                        
+                    </li> 
+<!-- FIM CATEGORIA ///////////////////////////////////////////////////////////////////////////////////////////////////////-->                     
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### LIVROS FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+
+
+
+
+
+
+
+
+                    
+                    
+
+                
+<!-- FIM DA MATÉRIA //////////////////////////////////////////////////////////////////////////// -->  
+        
+<!-- ///////////////////////////////////////////////////////// INDICE FIM///////////////////////////////////////////////////////////// --> 
+<!-- ///////////////////////////////////////////////////////// INDICE FIM///////////////////////////////////////////////////////////// --> 
+        </UL>
+    </div>
+</div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->   
+
+    </li>  
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 1 FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+-->    
+
+
+
+
+
+
+
+
+
+<!-- 
+-0
+-1
+-2
+ --> 
+<!--- #### COLUNA 1.1 AJUDA INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+    <li 
+        style="
+            height: 100%; float:    left;    position: relative; 
+            width:  75px; overflow: visible; z-index: 2000;"
+        
+        onMouseover="
+            this.style.backgroundColor='#23871C'; 
+            this.style.color='#3A3A3A';  
+            document.getElementById('coluna11tb').style.display = 'block'; "
+            
+        onMouseout="
+            this.style.backgroundColor='#3A3A3A';                               
+            document.getElementById('coluna11tb').style.display = 'none';  "
+    >
+        
+        <a 
+            target="_parent" 
+            href="https://jmarysystems.blogspot.com.br/" 
+            style="
+                color:           #fff; font-family:  Arial, Helvetica, sans-serif; 
+                font-size:       19px; padding-left: 10px; 
+                padding-right:   10px; line-height:  50px; 
+                text-decoration: none;"
+           
+            onMouseover=" this.style.color='black'; "
+            onMouseout="  this.style.color='#fff'; "       
+        > 
+            Home </a>              
+    </li>  
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 1.1 AJUDA FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+--> 
+
+
+
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 4 INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+    <li 
+        style="height: 100%;  float:    left;    position: relative; 
+               width:  65px;  overflow: visible; z-index: 2000;"
+        
+        onMouseover="
+            this.style.backgroundColor='#23871C'; 
+            this.style.color='#3A3A3A';  
+            document.getElementById('coluna4tb').style.display = 'block'; "
+            
+        onMouseout="
+            this.style.backgroundColor='#3A3A3A';                               
+            document.getElementById('coluna4tb').style.display = 'none';  "
+    >
+        
+        <a 
+            href="#" 
+            style="color:         #fff; font-family:  Arial, Helvetica, sans-serif; 
+                   font-size:     19px; padding-left: 10px; 
+                   padding-right: 10px; line-height:  50px; 
+                   text-decoration: none;"
+           
+           onMouseover=" 
+               this.style.color='black'; "
+           onMouseout="  
+               this.style.color='#fff'; "       
+        >
+            ++ &#9662; </a>
+        
+        <table 
+            id         ="coluna4tb" width      ="210px" border ="0" 
+            cellpadding="0"         cellspacing="0"     bgcolor="#3A3A3A" 
+            style="display: none;">
+            <tr> 
+                <td 
+                    align="center" width="250px" height="50px" 
+                    style="border-top: 1px solid #fff;"
+                    
+                    onMouseover="
+                        this.style.backgroundColor='#3498db'; 
+                        this.style.color='#3A3A3A';  
+                        this.style.cursor='pointer';  "
+                    onMouseout="
+                        this.style.backgroundColor='#3A3A3A';  
+                        this.style.color='#fff';     
+                        this.style.cursor='default';  "
+                    
+                    onClick="
+                        document.getElementById('centro').src='https://jmtrueconteudo.blogspot.com.br/2017/07/baixar-maquina-virtual-java-as-aulas-em_76.html';    
+                        document.getElementById('coluna2tb')    .style.display = 'none';       "
+                > 
+                    <a 
+                        target="centro" href="https://jmtrueconteudo.blogspot.com.br/2017/07/baixar-maquina-virtual-java-as-aulas-em_76.html"
+                        style="
+                            text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
+                            font-size: 14px;"
+                       
+                        onclick=" 
+                            document.getElementById('coluna4tb').style.display = 'none'; "
+                    >
+                            DOWNLOADS</a> 
+                </td> 
+            </tr> 
+            
+            <tr> 
+                <td 
+                    align="center" width="250px" height="50px" 
+                    style="border-top: 1px solid #fff;"
+                    
+                    onMouseover="
+                        this.style.backgroundColor='#3498db'; 
+                        this.style.color='#3A3A3A';  
+                        this.style.cursor='pointer';  "
+                    onMouseout="
+                        this.style.backgroundColor='#3A3A3A';  
+                        this.style.color='#fff';     
+                        this.style.cursor='default';  "
+                    
+                    onClick="
+                        document.getElementById('centro').src='https://jmtrueconteudo.blogspot.com.br/2018/04/baixar-maquina-virtual-java-as-aulas-em.html';    
+                        document.getElementById('coluna2tb')    .style.display = 'none';       "
+                > 
+                    <a 
+                        target="centro" href="https://jmtrueconteudo.blogspot.com.br/2018/04/baixar-maquina-virtual-java-as-aulas-em.html"
+                        style="
+                            text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
+                            font-size: 14px;"
+                       
+                        onclick=" 
+                            document.getElementById('coluna4tb').style.display = 'none'; "
+                    >
+                            COMPRAR</a> 
+                </td> 
+            </tr>
+                    
+            <tr> 
+                <td 
+                    align="center" width="250px" height="50px" 
+                    style="border-top: 1px solid #fff;"
+                    
+                    onMouseover="
+                        this.style.backgroundColor='#3498db'; 
+                        this.style.color='#3A3A3A';  
+                        this.style.cursor='pointer';  "
+                    onMouseout="
+                        this.style.backgroundColor='#3A3A3A';  
+                        this.style.color='#fff';     
+                        this.style.cursor='default';  "
+                    
+                    onClick="
+                        window.open('https://github.com/jmarysystems?tab=repositories', '_blank');
+                        document.getElementById('coluna2tb')    .style.display = 'none';       "
+                > 
+                    <a 
+                        target="new" href="https://github.com/jmarysystems?tab=repositories"
+                        style="
+                            text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
+                            font-size: 14px;"
+                       
+                        onclick=" 
+                            document.getElementById('coluna4tb').style.display = 'none'; "
+                    >
+                            PROJETOS</a> 
+                </td> 
+            </tr> 
+        </table>                
+    </li>  
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 4 FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+
+
+
+
+
+<!-- 
+-0
+-1
+-2
+- #### ÚLTIMA COLUNA INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+    <li style="float: right; height: 100%; ">
+        <div id="menuseta"> </div>   
+    </li>
+<!-- 
+-0
+-1
+-2
+- #### ÚLTIMA COLUNA FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+-->            
+</ul>                                  
+</div> 
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### MENU FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+        
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### IFRAME CENTRO INÍCIO #### --> 
+<!-- 
+-0
+-1             
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->    
+    <iframe id="centro" name="centro" scrolling="auto" width="100%" frameborder="0" allowfullscreen
+        src="https://jmtrueconteudo.blogspot.com.br/2017/08/baixar-maquina-virtual-java-as-aulas-em.html" >            
+    </iframe>     
+    
+<script type="text/javascript">
+function resizeIframe() {
+    var height = document.documentElement.clientHeight;
+    
+    document.getElementById('centro').style.height = height +"px"; //  - height +"px" - para ficar do tamanho da página
+};
+document.getElementById('centro').onload = resizeIframe;
+window.onresize = resizeIframe;
+</script>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### IFRAME CENTRO FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+                
+<script type="text/javascript">
+    function mostrarocultar(id) {
+    
+        if( document.getElementById(id).style.display === 'none' ){
+            document.getElementById(id).style.display = 'block';
+        }else{
+            document.getElementById(id).style.display = 'none';
+        }
+    };
+    function indiceclickmostrarocultar_tr( id ){
+        
+        if ( $('#'+id).hasClass("dispnone") === true ){
+            
+            $('#'+id).removeClass("dispnone");
+            $( '#'+id ).css('display','block'); 
+        }
+        else{
+            
+            $('#'+id).addClass("dispnone");
+            $( '#'+id ).css('display','none'); 
+        }                           
+    } 
+    function indiceonmouseoveralterarimagem( obg, src){ var src2 = ($(obg).attr('src') );
+              //SE FOR NO BLOG UTILIZE SRC
+        switch( src2 ) {
+             //SINAL DE + BRANCO
+        case "img/maisbco.png": 
+            //SINAL DE + PRETO
+            obg.src="img/maispto.png"; 
+            break;
+             //SINAL DE + PRETO
+        case "img/maispto.png": 
+                    //SINAL DE + BRANCO
+            obg.src="img/maisbco.png"; 
+            break;
+             //SINAL DE - PRETO
+        case "img/menospto.png": 
+                    //SINAL DE - BRANCO
+            obg.src="img/menosbco.png"; 
+            break;  
+             //SINAL DE - BRANCO
+        case "img/menosbco.png": 
+                    //SINAL DE - PRETO
+            obg.src="img/menospto.png"; 
+            break;      
+        }
+    }                                             
+    function indiceclickalterarimagem( obg, src){ var src2 = ($(obg).attr('src') );   
+               //SE FOR NO BLOG UTILIZE SRC
+        switch( src2 ) {
+        
+             //SINAL DE + PRETO
+        case "img/maispto.png":
+                    //SINAL DE - PRETO
+            obg.src="img/menospto.png"; 
+            break;
+             //SINAL DE - PRETO
+        case "img/menospto.png": 
+                    //SINAL DE + PRETO
+            obg.src="img/maispto.png"; 
+            break;
+        }
+    }
+</script>   
+<!-- 
+-0
+-1
+-2
+- #### JQUERY INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->  
+ <script type="text/javascript">
+jQuery(document).ready(function(){
+
+
+    $(".topo2 .icemegamenu .icemegamenu > ul > li").on("click",function(e){
+        $(".topo2 .icemegamenu .icemegamenu > ul > li").removeClass('active');
+        $(e.currentTarget).addClass('active');
+    });
+    
+    $("#menuimg").on("click",function(e){
+        
+        mostrarOcultarProp('dispnone');
+    });
+    
+    $(".menul").on("click",function(e){
+        
+        mostrarOcultarProp('dispnone');
+    });
+    
+    function mostrarOcultarProp(classe){
+        
+        $("#listadomenu").toggleClass(classe);
+        $("#indice").toggleClass(classe);
+        
+        
+        $("#topo_geral_prop_t").toggleClass(classe);
+    }
+    
+    $('#centro').load(function(){
+               
+    });
+    
+    $('a').click(function(){
+        $('html, body').animate({scrollTop: 0},'slow');
+    });
+    
+    $('.img_list').attr('src','https://lh6.googleusercontent.com/kVInumJ9ZHKfkUIPf_FchiHlx3LCWqdjZDysXdjOpKc=s207-p-no');
+    $('.img_maisbco').attr('src','https://lh6.googleusercontent.com/-dQh94gLAuBp5txaFOBnzGF3AWpJc783cdKd0Pu5k8M=s207-p-no');
+    $('.img_maisbco').hover(
+            function(e) { mostrarOcultaropcao( this, this.src); 
+         }, function(e) { mostrarOcultaropcao( this, this.src); 
+    });
+    $('.img_menosbco').attr('src','https://lh6.googleusercontent.com/kVInumJ9ZHKfkUIPf_FchiHlx3LCWqdjZDysXdjOpKc=s207-p-no');
+    $('.img_menosbco').hover(
+            function(e) { mostrarOcultaropcao( this, this.src); 
+         }, function(e) { mostrarOcultaropcao( this, this.src); 
+    });
+    $('.img_list').hover(
+            function(e) { mostrarOcultaropcao( this, this.src); 
+         }, function(e) { mostrarOcultaropcao( this, this.src); 
+    });
+    $(".img_list").on("click",function(e){
+        imgclickopcao( this, this.src); 
+    });
+    $(".img_maisbco").on("click",function(e){
+        imgclickopcao( this, this.src); 
+    });
+    $(".img_menosbco").on("click",function(e){
+        imgclickopcao( this, this.src); 
+    });
+    function mostrarOcultaropcao( obg, src){
+        switch( src ) {
+        
+        case "https://lh6.googleusercontent.com/-dQh94gLAuBp5txaFOBnzGF3AWpJc783cdKd0Pu5k8M=s207-p-no": 
+            obg.src="https://lh3.googleusercontent.com/ontFcFJjvZVC7mQMdF84BEi1DkCubmknTWXUHapnKa0=s207-p-no"; 
+            break;
+        case "https://lh3.googleusercontent.com/ontFcFJjvZVC7mQMdF84BEi1DkCubmknTWXUHapnKa0=s207-p-no": 
+            obg.src="https://lh6.googleusercontent.com/-dQh94gLAuBp5txaFOBnzGF3AWpJc783cdKd0Pu5k8M=s207-p-no"; 
+            break;
+        case "https://lh4.googleusercontent.com/6mP8vSsBlnKjD_Qm8QrVL7vcKswOIXlqWw7DxRbHbmM=s207-p-no": 
+            obg.src="https://lh6.googleusercontent.com/kVInumJ9ZHKfkUIPf_FchiHlx3LCWqdjZDysXdjOpKc=s207-p-no"; 
+            break;  
+        case "https://lh6.googleusercontent.com/kVInumJ9ZHKfkUIPf_FchiHlx3LCWqdjZDysXdjOpKc=s207-p-no": 
+            obg.src="https://lh4.googleusercontent.com/6mP8vSsBlnKjD_Qm8QrVL7vcKswOIXlqWw7DxRbHbmM=s207-p-no"; 
+            break;      
+        }
+    }
+    function imgclickopcao( obg, src){                            
+        switch( src ) {
+        
+        case "https://lh3.googleusercontent.com/ontFcFJjvZVC7mQMdF84BEi1DkCubmknTWXUHapnKa0=s207-p-no": 
+            obg.src="https://lh4.googleusercontent.com/6mP8vSsBlnKjD_Qm8QrVL7vcKswOIXlqWw7DxRbHbmM=s207-p-no"; 
+            break;
+        case "https://lh4.googleusercontent.com/6mP8vSsBlnKjD_Qm8QrVL7vcKswOIXlqWw7DxRbHbmM=s207-p-no": 
+            obg.src="https://lh3.googleusercontent.com/ontFcFJjvZVC7mQMdF84BEi1DkCubmknTWXUHapnKa0=s207-p-no"; 
+            break;
+        }
+    }
+    
+
+});
+    
+jQuery(window).resize(function() {
+
+    var browser_width2 = jQuery(window).width();
+
+});
+</script>
+<!-- 
+-0
+-1
+-2
+- #### JQUERY FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   
+-->
+
+
+    </body>
+</html>

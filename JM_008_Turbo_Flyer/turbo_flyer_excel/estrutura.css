@@ -1,0 +1,191 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/03/2014, 00:25:21
+    Author     : pc
+*/
+
+.h4 { page-break-before:always; }
+            
+@page { size: 21cm 29.7cm; margin-left: 0.5cm; margin-right: 0.5cm; margin-top: 0.5cm; margin-bottom: 0.5cm; }
+@page:first { size: 21cm 29.7cm; margin-left: 0.5cm; margin-right: 0.5cm; margin-top: 0.5cm; margin-bottom: 0.5cm; }
+
+html, body { height: 100%; }
+
+body { font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding: 0px; margin: 0px 0px 0px 0px;
+       color: black; line-height: 1.0;
+}
+
+.menu       { text-decoration:none; color:#FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
+.menu:hover {color:#FFFFFF; text-decoration:underline; }
+
+.menul       { text-decoration:none; color:#0000FF; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
+.menul:hover {color:#0000FF; text-decoration:underline; }
+
+.botm2:hover {color: black; font-size: 14px; text-align: center; font-weight:bold; background: #CCFF00; cursor: pointer; }
+            
+.txttitulo1 { color: #1C1C1C; font-size: 14px; text-align: center; }
+.txttitulo2 { color: #1C1C1C; font-size: 10px; text-align: center; }
+.txttitulo3 { color: #1C1C1C; font-size: 10px; text-align: left;   }
+.txttitulo4 { color: #1C1C1C; font-size: 9px;                     }
+
+/* background */
+.backp     { background-color:#E4E4E4; }
+.backtitulo{ background: #CCFF00;      }
+.backred   { background-color:#C10033; }
+.backcinza { background-color:#F0F0F0; }
+.backbco   { background-color:#FFFFFF; }
+
+.boxtitulosombra { box-shadow: 0 0 10px #222; }
+
+/* COR DO TEXTO */
+fazul    { color: #0000FF; }
+fpreto   { color:#000000;  }
+fbranca  { color: white;   }
+froxo    { color: #520693; }
+fverde   { color: #339900; }
+.flaranja{ color: #EF7900 ;}
+.fpreto  { color:#000000;  }
+            
+.festilobold{ font-weight:bold; }
+            
+/* DECORAÇÂO DO TEXTO */
+.decotxtnao  { text-decoration:none;      }
+.decotxtlinha{ text-decoration:underline; }
+            
+/* ALIMENTAÇÃO DO TEXTO HORIZONTAL*/
+.alimtxtcenterh {text-align:center;  }
+.alimtxtlefth   {text-align:left;    }
+.alimtxtrighth  {text-align:right;   }
+.alimtxtjustifyh{text-align:justify ;}
+
+/* ALIMENTAÇÃO DO TEXTO VERTICAL*/
+.alimtxtcenterv { vertical-align: central; }
+.alimtxttopov   { vertical-align: top; }
+
+            
+/* CURSORES DO MOUSE */
+.mousepointer{ cursor:pointer; }
+      
+/* MOUSE HOVER */
+.mouseencimatxtverde:hover    { color: #00CC00;            }
+
+.mouseencimaftm16px:hover     { font-size:16px;            }
+
+.mouseencimadecotxtnao:hover  { text-decoration:none;      }
+.mouseencimadecotxtsim:hover  { text-decoration:underline; }
+
+/* LINK */
+.linktipo1:link             { color: #0000FF;            }
+.linktipo1:visited          { color: #0000FF;            }
+.linktipo1:active           { color: #0000FF;            }
+.linktipo1:hover            { color: #00CC00;            }
+
+            
+/* TAMANHOS DE FONTES */
+.ftm10px{ font-size:10px; }
+.ftm11px{ font-size:11px; }
+.ftm12px{ font-size:12px; }
+.ftm13px{ font-size:13px; }
+.ftm14px{ font-size:14px; }
+.ftm15px{ font-size:15px; }
+.ftm16px{ font-size:16px; }
+.ftm17px{ font-size:17px; }
+.ftm18px{ font-size:18px; }
+.ftm19px{ font-size:19px; }
+.ftm20px{ font-size:20px; }
+.ftm140porc{ font-size:140%; }
+            
+/* PADDING TOP*/
+.pf0 { padding: 0px      }
+.pt0 { padding-top:0px   }
+.pt2 { padding-top:2px   }
+.pt3 { padding-top:3px   }
+.pt5 { padding-top:5px   }
+            
+/* PADDING DIREITA */
+.pr0  { padding-right:0px   }
+.pr20 { padding-right:20px   }
+            
+/* PADDING ESQUERDA */
+.pl0  { padding-left:0px  }
+.pl10 { padding-left:10px }
+.pl20 { padding-left:20px }
+            
+/* PADDING BOTTOM */
+.pb0 {padding-bottom:0px }
+            
+/* MARGIN BOTTOM */
+.mf0  { margin: 0px  }
+.mb0  { margin-bottom:0px  }
+.mb10 { margin-bottom:10px } 
+.mb20 { margin-bottom:20px } 
+            
+/* MARGIN ESQUERDA */
+.mlpercent1  { margin-left:1% }
+.ml2   { margin-left:2px }
+.ml0   { margin-left:0px }
+.ml13  { margin-left:13px }
+.ml15  { margin-left:15px }
+.ml20  { margin-left:20px }
+.ml30  { margin-left:30px }
+.ml40  { margin-left:40px }
+.ml60  { margin-left:60px }
+.ml150 { margin-left: 150px; }
+.ml180 { margin-left: 180px; }
+.ml190 { margin-left: 190px; }
+            
+/* MARGIN DIREITA */
+.mr0 { margin-right:0px }
+.mr2 { margin-right:2px }
+.mr3 { margin-right:3px }
+.mr20 { margin-right:20px }
+            
+/* MARGIN TOP */
+.mt0  { margin-top:0px  }
+.mt3  { margin-top:3px  }
+.mt4  { margin-top:4px  }
+.mt5  { margin-top:5px  }
+.mt2  { margin-top:2px  }
+.mt10 { margin-top:10px }
+.mt11 { margin-top:11px }
+.mt15 { margin-top:15px }
+.mt20 { margin-top:20px }
+
+/* FLOAT */
+.floatl { float: left;  }
+.floatr { float: right; }
+
+/* POSITION */
+.positionr{ position:relative; }
+.positiona{ position:absolute; }
+
+/* Tamanho Vertical */
+.h16px  { height: 16px;  }
+.h27px  { height: 27px;  }
+.h28px  { height: 28px;  }
+.h44px  { height: 44px;  }
+.h62px  { height:62px;   }
+.h131px { height: 131px; }
+.h134px { height: 134px; }
+
+/* Tamanho Horizonal */
+.wpercent99  { width:99%;   }
+.wpercent100 { width:100%;  }
+.w27px       { width:27px;  }
+.w146px      { width:146px; }
+
+/* border-bottom-style */
+.bbsr{ border-bottom-style: ridge; }
+
+/* border-bottom-color */
+.bbcb { border-bottom-color: #FFFFFF; }
+
+/* display */
+.dispin { display:inline; }
+
+/* list-style */
+.listsn { list-style:none; }
